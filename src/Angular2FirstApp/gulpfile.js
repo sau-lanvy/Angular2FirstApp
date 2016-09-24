@@ -18,7 +18,8 @@ gulp.task('copy:lib', ['clean'], function () {
        "zone.js",
        "reflect-metadata",
        "rxjs",
-       "es6-shim"
+       "platform - browser",
+       "platform-browser-dynamic"
     ];
 
     var promises = [];

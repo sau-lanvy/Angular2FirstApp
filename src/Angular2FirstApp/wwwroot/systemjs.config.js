@@ -1,7 +1,7 @@
 ﻿(function (global) {
     // map tells the System loader where to look for things
     var map = {
-        'app': 'js/app', // 'dist',
+        'app': 'app', // 'dist',
         '@angular': 'lib/@angular',
         'rxjs': 'lib/rxjs'
     };
@@ -11,19 +11,19 @@
         'rxjs': { defaultExtension: 'js' }
     };
     var ngPackageNames = [
-       'common',
-       'compiler',
-       'core',
-       'http',
-       'platform-browser',
-       'platform-browser-dynamic',
-       'router',
-       'router-deprecated',
-       'upgrade',
+        'common',
+        'compiler',
+        'core',
+        'forms',
+        'http',
+        'platform-browser',
+        'platform-browser-dynamic',
+        'router',
+        'upgrade',
     ];
     // Add package entries for angular packages
     ngPackageNames.forEach(function (pkgName) {
-        packages['@angular/' + pkgName] = { main: pkgName + '.umd.js', defaultExtension: 'js' };
+        packages['@angular/' + pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
     });
     var config = {
         map: map,
